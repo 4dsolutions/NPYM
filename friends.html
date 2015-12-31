@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}NPYM Friends{% endblock %}
+{% block head %}
+    {{ super() }}
+    <style>
+    </style>
+{% endblock %}
+{% block body %}
+<table cellpadding="2" cellspacing="5">
+<tr>
+<th>Name</th>
+<th>ID</th>
+</tr>
+    {% for rec in recs %}
+        <tr><td>{{rec[0]}}</td><td>{{rec[1]}}</td></tr>
+    {% endfor %}
+</table>
+{% endblock %}
