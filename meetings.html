@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}NPYM Meetings{% endblock %}
+{% block head %}
+    {{ super() }}
+    <style>
+    </style>
+{% endblock %}
+{% block body %}
+<table>
+    {% for rec in recs %}
+        <tr><td>{{rec[0]}}</td><td>{{rec[1]}}</td>
+        <td>{{rec[2]}}</td><td>{{rec[3]}}</td></tr>
+    {% endfor %}
+</table>
+{% endblock %}
