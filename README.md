@@ -17,11 +17,20 @@ The API runs queries to populate simple Jinja2 templates, standard with Flask.
 Example URIs (purely science fictional at this time -- no reason to try visiting, just 
 get your own version up and running for continuing development):
 
-List all meetings in NPYM:    ds.npym.org/meetings
-List details for one meeting: ds.npym.org/meeting/mm
-Currently serving on Committees etc.: ds.npym.org/meeting/mm/slate
-... at Yearly Meeting level:  ds.npym.org/meeting/npym/slate
-Listing of Friends willing to be listed: ds.npym.org/meeting/mm/friends
+List all meetings in NPYM:    
+ds.npym.org/meetings
+
+List details for one meeting: 
+ds.npym.org/meeting/mm
+
+Currently serving on Committees etc.: 
+ds.npym.org/meeting/mm/slate
+
+... at Yearly Meeting level:  
+ds.npym.org/meeting/npym/slate
+
+Listing of Friends willing to be listed: 
+ds.npym.org/meeting/mm/friends
 
 (ds = directory services) -- in 2015 we were talking about partitioning into subdomains
 but had not done so.  I was clerk of IT Committee, brainstorming about the future.
