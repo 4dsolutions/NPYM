@@ -1,0 +1,64 @@
+ag|pnqm|Agate Passage|1|http:/npym.org|http:/npym.org|False
+be|pnqm|Bellingham|1|http:/npym.org|http:/npym.org|False
+bi|mgof|Billings|1|http:/npym.org|http:/npym.org|False
+bo|wqm|Boise Valley|1|http:/npym.org|http:/npym.org|False
+boz|mgof|Bozeman|2|http:/npym.org|http:/npym.org|False
+br|wqm|Bridge City|1|http:/npym.org|http:/npym.org|False
+bu|pnqm|Buckley|2|http:/npym.org|http:/npym.org|False
+ce|wqm|Central Oregon|2|http:/npym.org|http:/npym.org|False
+ch|pnqm|Chelan-Methow|2|http:/npym.org|http:/npym.org|False
+co|wqm|Corvallis|1|http:/npym.org|http:/npym.org|False
+di|mgof|Dillon|2|http:/npym.org|http:/npym.org|False
+ea|pnqm|Eastside|1|http:/npym.org|http:/npym.org|False
+el|pnqm|Ellensburg|2|http:/npym.org|http:/npym.org|False
+eug|wqm|Eugene|1|http:/npym.org|http:/npym.org|False
+eur|mgof|Eureka|2|http:/npym.org|http:/npym.org|False
+fa|wqm|Fanno Creek|2|http:/npym.org|http:/npym.org|False
+fl|wqm|Florence|2|http:/npym.org|http:/npym.org|False
+gl|mgof|Glacier Valley|2|http:/npym.org|http:/npym.org|False
+gra|pnqm|Grays Harbor|2|http:/npym.org|http:/npym.org|False
+gre|mgof|Great Falls|2|http:/npym.org|http:/npym.org|False
+hea|mgof|Heartland|1|http:/npym.org|http:/npym.org|False
+hel|mgof|Helena|2|http:/npym.org|http:/npym.org|False
+hld||Hillsdale Friends|6|||False
+Isol|pnqm|Isolated|2|http:/npym.org|http:/npym.org|False
+lo|pnqm|Lopez Island|3|http:/npym.org|http:/npym.org|False
+loc|wqm|Lower Columbia|2|http:/npym.org|http:/npym.org|False
+ma|pnqm|Marysville|2|http:/npym.org|http:/npym.org|False
+me|pnqm|Methow Valley|2|http:/npym.org|http:/npym.org|False
+mii|mgof|Mission Valley|2|http:/npym.org|http:/npym.org|False
+mio|mgof|Missoula|1|http:/npym.org|http:/npym.org|False
+mo|wqm|Mountain View|2|http:/npym.org|http:/npym.org|False
+mu|wqm|Multnomah|1|http:/npym.org|http:/npym.org|False
+noc|pnqm|North Coast|2|http:/npym.org|http:/npym.org|False
+noe|pnqm|North End Home|2|http:/npym.org|http:/npym.org|False
+ol|pnqm|Olympia|1|http:/npym.org|http:/npym.org|False
+poc|mgof|Pocatello|2|http:/npym.org|http:/npym.org|False
+por|pnqm|Port Townsend|1|http:/npym.org|http:/npym.org|False
+pu|pnqm|Pullman-Moscow|1|http:/npym.org|http:/npym.org|False
+sal|wqm|Salem|1|http:/npym.org|http:/npym.org|False
+sam|pnqm|Salmon Bay|1|http:/npym.org|http:/npym.org|False
+san|pnqm|San Juan|2|http:/npym.org|http:/npym.org|False
+sand|pnqm|Sandpoint|1|http:/npym.org|http:/npym.org|False
+se|pnqm|Sequim|2|http:/npym.org|http:/npym.org|False
+shl|pnqm|Shelton|2|http:/npym.org|http:/npym.org|False
+shr|mgof|Sheridan|2|http:/npym.org|http:/npym.org|False
+sk|pnqm|Sky Valley|2|http:/npym.org|http:/npym.org|False
+som|wqm|South Mountain|1|http:/npym.org|http:/npym.org|False
+sos|pnqm|South Seattle|1|http:/npym.org|http:/npym.org|False
+sw|pnqm|SW Washington|2|http:/npym.org|http:/npym.org|False
+ta|pnqm|Tacoma|1|http:/npym.org|http:/npym.org|False
+to|pnqm|Tonasket|2|http:/npym.org|http:/npym.org|False
+tllm||This Little Light of Mine|6|http:/npym.org|http:/npym.org|False
+tw|wqm|Twin Falls|2|http:/npym.org|http:/npym.org|False
+um|pnqm|Umpqua Valley|2|http:/npym.org|http:/npym.org|False
+un|pnqm|University|1|http:/npym.org|http:/npym.org|False
+va|pnqm|Vashon Island|2|http:/npym.org|http:/npym.org|False
+wad|pnqm|Waldron Island|2|http:/npym.org|http:/npym.org|False
+wal|pnqm|Walla Walla|3|http:/npym.org|http:/npym.org|False
+we|pnqm|Wenatchee Valley|2|http:/npym.org|http:/npym.org|False
+wh|pnqm|Whidbey Island|1|http:/npym.org|http:/npym.org|False
+wi|wqm|Willamette Falls|2|http:/npym.org|http:/npym.org|False
+ya|pnqm|Yakima Valley|2|http:/npym.org|http:/npym.org|False
+npym|npym|NPYM|5|http:/npym.org|http:/npym.org|False
+mgof|mgof|Montana Gathering|4|http:/npym.org|http:/npym.org|False
