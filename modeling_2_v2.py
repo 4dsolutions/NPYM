@@ -3,13 +3,9 @@
 Created on Sat Dec  5 18:42:43 2015
 
 @author: kurner
+
+@author: kurner
 (copyleft) MIT License, 2015
-
-Creates tables and views in a primitive yet persistent manner.  Uses
-real world data to build NPYM.db, an sqlite database.
-
-A next layer displays the data through the web using flask
-
 """
 
 import sqlite3 as sql
@@ -312,6 +308,9 @@ class DB:
         print("MEETING_TYPES:")
         for row in DB.c.execute("SELECT * FROM meeting_types"):
             print(row)
+        print("MEETING_TYPES:")
+        for row in DB.c.execute("SELECT * FROM marriages"):
+            print(row)
             
 class DBcontext():
 
@@ -327,21 +326,21 @@ class DBcontext():
         
 def create_DB():
 
-    DB.c.execute("""DROP TABLE Meetings""")
+    DB.c.execute("""DROP TABLE IF EXISTS Meetings""")
     DB.c.execute("""CREATE TABLE Meetings
         (mtg_code text PRIMARY KEY,
          mtg_name text,
          mtg_quarter text,
          mtg_type int)""")
 
-    DB.c.execute("""DROP TABLE Groups""")
+    DB.c.execute("""DROP TABLE IF EXISTS Groups""")
     DB.c.execute("""CREATE TABLE Groups
         (mtg_code text,
          group_id text,
          group_name text,
          group_type text)""")
 
-    DB.c.execute("""DROP TABLE Friends""")
+    DB.c.execute("""DROP TABLE IF EXISTS Friends""")
     DB.c.execute("""CREATE TABLE Friends
         (friend_id int PRIMARY KEY,
          friend_name text,
@@ -349,7 +348,7 @@ def create_DB():
          friend_twitter text,
          friend_url text)""")
 
-    DB.c.execute("""DROP TABLE Households""")         
+    DB.c.execute("""DROP TABLE IF EXISTS Households""")         
     DB.c.execute("""CREATE TABLE Households
         (mtg_code text,
          hh_id text,
@@ -362,16 +361,16 @@ def create_DB():
          hh_phone text,
          hh_latlong text)""")
 
-    DB.c.execute("""DROP TABLE Roles""") 
+    DB.c.execute("""DROP TABLE IF EXISTS Roles""") 
     DB.c.execute("""CREATE TABLE Roles
         (role_name text)""")
 
-    DB.c.execute("""DROP TABLE Meeting_Types""") 
+    DB.c.execute("""DROP TABLE IF EXISTS Meeting_Types""") 
     DB.c.execute("""CREATE TABLE Meeting_Types
         (mtg_type int,
          mtg_type_desc text)""")
         
-    DB.c.execute("""DROP TABLE Services""") 
+    DB.c.execute("""DROP TABLE IF EXISTS Services""") 
     DB.c.execute("""CREATE TABLE Services
         (friend_id int,
          group_id text,
@@ -382,13 +381,13 @@ def create_DB():
          user_initials text,
          mod_date int)""")
          
-    DB.c.execute("""DROP TABLE Users""") 
+    DB.c.execute("""DROP TABLE IF EXISTS Users""") 
     DB.c.execute("""CREATE TABLE Users
         (user_initials text,
          user_timezone text,
          password_enc text)""")
 
-    DB.c.execute("""DROP VIEW member_attender""")         
+    DB.c.execute("""DROP VIEW IF EXISTS member_attender""")         
     DB.c.execute("""CREATE VIEW 
     member_attender AS 
     SELECT fr.friend_name, fr.friend_id, mtg.mtg_code, mtg.mtg_name, 
@@ -400,7 +399,7 @@ def create_DB():
         AND (gr.group_type = "MEMBERS" OR gr.group_type = 'ATTENDERS')
         ORDER BY fr.friend_name""")
 
-    DB.c.execute("""DROP VIEW hhlds""")         
+    DB.c.execute("""DROP VIEW IF EXISTS hhlds""")         
     DB.c.execute("""CREATE VIEW 
     hhlds AS
     SELECT mtg.mtg_code, gr.hh_id, gr.hh_name, gr.hh_street, gr.hh_city, gr.hh_state,
@@ -412,7 +411,7 @@ def create_DB():
         AND (srv.group_id = gr.hh_id AND srv.mtg_code = gr.mtg_code)
         ORDER BY mtg.mtg_code, gr.hh_id, fr.friend_name""")
 
-    DB.c.execute("""DROP VIEW marriages""")         
+    DB.c.execute("""DROP VIEW IF EXISTS marriages""")         
     DB.c.execute("""CREATE VIEW 
     marriages AS
     SELECT mtg.mtg_code, gr.group_id, fr.friend_name, fr.friend_id,  
@@ -424,6 +423,18 @@ def create_DB():
         AND (gr.group_type = "MARRIAGE")
         ORDER BY mtg.mtg_code, gr.group_id, fr.friend_name""")
         
+    DB.c.execute("""DROP VIEW IF EXISTS slates""")         
+    DB.c.execute("""CREATE VIEW 
+    slates AS        
+    SELECT mtg.mtg_code, gr.group_name, srv.role_name, fr.friend_name, 
+    srv.friend_id, srv.start_date, srv.stop_date  
+        FROM services srv, friends fr, groups gr, meetings mtg
+        WHERE srv.friend_id = fr.friend_id
+        AND (srv.mtg_code = mtg.mtg_code)
+        AND (srv.group_id = gr.group_id AND srv.mtg_code = gr.mtg_code)
+        AND (gr.group_type = "STANDING" OR gr.group_type = "AD HOC" 
+        OR gr.group_type = "POSITION")
+        ORDER BY mtg.mtg_code, gr.group_name, srv.friend_id""")
     DB.conn.commit()
     
 if __name__ == "__main__":
