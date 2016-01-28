@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}NPYM Meeting Slate{% endblock %}
+{% block head %}
+    {{ super() }}
+    <style>
+    </style>
+{% endblock %}
+{% block body %}
+<table cellpadding="2" cellspacing="5">
+<tr>
+<th>Function</th>
+<th>Role</th>
+<th>Name</th>
+<th>Start</th>
+<th>Stop</th>
+</tr>
+    {% for rec in recs %}
+        <tr><td>{{rec[1]}}</td><td>{{rec[2]}}</td>
+        <td>{{rec[3]}}</td>
+        <td>{{converter(rec[5])}}</td>
+        <td>{{converter(rec[6])}}</td></tr>
+    {% endfor %}
+</table>
+{% endblock %}
