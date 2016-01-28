@@ -19,7 +19,7 @@ import os
 import time
 import datetime
 
-target_path = '/Users/kurner/Documents/classroom_labs'
+target_path = '/home/thekirbster/NPYM'
 db_name = os.path.join(target_path, 'npym.db')
 
 app = Flask(__name__)
